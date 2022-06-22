@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    position: relative;
+    color: white;
+}
+body::before {
+    background: url("..//img/bc.jpg") no-repeat center center;
+    background-size: cover;
+    content: ' ';
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: -1;
+}
+@font-face {
+    font-family: 'e-Ukraine Thin';
+    src: url(..//fonts/e-Ukraine-Thin.woff);
+}
+@font-face {
+    font-family: 'e-Ukraine Regular';
+    src: url(..//fonts/e-Ukraine-Regular.woff);
+}
+@font-face {
+    font-family: 'e-Ukraine Bold';
+    src: url(..//fonts/e-Ukraine-Bold.woff);
+}
+.conteiner {
+    width: 90%;
+    margin: 0 auto;
+}
+.logo {
+    font-family: 'e-Ukraine Bold';
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.top {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.close {
+    align-items: center;
+    display: block;
+}
+.one, .two {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #F6851F;
+    margin: 0 auto;
+}
+.one {
+    transform: rotate(45deg);
+    
+}
+.two {
+    transform: rotate(-45deg);
+    margin-top: -4px;
+}
+.content-block {
+    width: 45%;
+    max-width: 700px;
+    margin: 0 auto;
+    height: max-content;
+    margin-top: 50px;
+}
+.name, .phone, .email{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    color: white;
+    outline: none;
+    border: none;
+    font-family: 'e-Ukraine Regular';
+    font-size: 20px;
+    border-bottom: 2px solid white;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    transition: ease 0.1s;  
+}
+.name {
+    margin-top: 0;
+}
+h2 {
+    font-family: 'e-Ukraine Thin';
+    font-size: 56px;
+    font-weight: 200;
+    display: block;
+    width: 70%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.form-two {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    align-items: center;
+}
+.submit {
+    height: 45px;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    font-family: 'e-Ukraine Regular';
+    text-align: center;
+    width: 235px;
+    margin: 0 auto;
+    transition: ease 0.5s;
+    border: none;
+    cursor: pointer;
+
+}
+.submit:hover {
+    background-color: #fff;
+    color: black;
+}
+.submit-block {
+    height: 60px;
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    font-size: 18px;
+    font-family: 'e-Ukraine Regular';
+    text-align: center;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    background-color: black;
+}
+.text-blok {
+    font-size: 12px;
+    color: gray;
+    width: 45%;
+    font-family: 'e-Ukraine Thin';
+    text-align: right;
+}
+.text-link-block {
+    color: rgb(199, 199, 199);
+}
+
+/* Reset style input number */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  input[type="number"]:hover,
+  input[type="number"]:focus {
+    -moz-appearance: number-input;
+  }
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }

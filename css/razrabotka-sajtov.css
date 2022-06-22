@@ -1,0 +1,979 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    color: white;
+}
+body::before {
+    background: url("..//img/bc.jpg") no-repeat center center;
+    background-size: cover;
+    content: ' ';
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    will-change: transform;
+    z-index: -1;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul li{
+    list-style: none;
+    font-family: 'e-Ukraine Bold';
+    font-size: 14px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'e-Ukraine Bold';
+    src: url(..//fonts/e-Ukraine-Bold.woff);
+}
+@font-face {
+    font-family: 'e-Ukraine Light';
+    src: url(..//fonts/e-Ukraine-Light.woff);
+}
+@font-face {
+    font-family: 'e-Ukraine Medium';
+    src: url(..//fonts/e-Ukraine-Medium.woff);
+}
+@font-face {
+    font-family: 'e-Ukraine Regular';
+    src: url(..//fonts/e-Ukraine-Regular.woff);
+}
+@font-face {
+    font-family: 'e-Ukraine Thin';
+    src: url(..//fonts/e-Ukraine-Thin.woff);
+}
+
+/* Header-menu */
+
+.conteiner {
+    width: 90%;
+    margin: 0 auto;
+
+    /* max-width: 1370px; */
+}
+header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-family: 'e-Ukraine Bold';
+    text-transform: uppercase;
+    font-size: 25px;
+}
+h1 {
+    font-family: 'e-Ukraine Bold';
+    font-size: 14px;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__menu {
+    display: flex;
+    font-family: 'e-Ukraine Regular';
+    color: #F6851F;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+.nav {
+    width: 190px;
+}
+
+/* menu  */
+.menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    position: fixed;
+}
+.wrapper-span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    margin-left: 15px;
+}
+.span-menu {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #F6851F; 
+}
+.span-one {
+    width: 20px;
+}
+.menu-one {
+    display: none;
+}
+.menu-two {
+    transform: rotate(-45deg);
+}
+.menu-three {
+    transform: rotate(45deg);
+    position: absolute;
+}
+.span-menu-menu {
+    padding-top: 9px;
+}
+.menu-menu {
+    margin-top: 10px;
+}
+.drop-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+}
+.drop-l {
+    width: 65%;
+}
+.drop-r {
+    width: 35%;
+}
+.drop-link {
+    display: block;
+    font-size: 64px;
+    font-family: 'e-Ukraine Bold';
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+    transition: ease .5s;
+    margin: -10px;
+}
+.drop-link:first-child {
+    margin-top: 0;
+}
+.drop-link:hover {
+    color: white;
+}
+.drop-socialnet {
+    font-family: 'e-Ukraine Bold';
+    font-weight: 900;
+}
+.drop-s {
+    padding-top: 20px;
+}
+.drop-socialnet {
+    transition: ease .5s;
+}
+.drop-socialnet:hover {
+    color: #F6851F;
+}
+.block-r {
+    width: 100%;
+    height: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.drop-title-c, .drop-title-t {
+    display: block;
+    width: 80%;
+    padding-top: 50px;
+    margin-top: 40px;
+}
+.drop-title-c {
+    font-size: 16px;
+    font-family: 'e-Ukraine Thin';
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.drop-title-t {
+    font-size: 24px;
+    font-family: 'e-Ukraine Regular';
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.drop-mail {
+    position: absolute;
+    bottom: 70px;
+    left: 50px
+}
+.f-socialnetwork {
+    margin-top: 30px;
+}
+.drop-socialnet {
+    font-family: 'e-Ukraine Bold';
+}
+.drop-socialnet {
+    transition: ease .5s;
+}
+.drop-socialnet:hover {
+    color: #F6851F;
+}
+.socialnet {
+    font-size: 14px;
+    font-family: 'e-Ukraine Thin';
+    margin-left: 30px;
+}
+.socialnet:first-child {
+    margin-left: 0;
+}
+
+/* SubMenu */
+
+.submenu {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-family: 'e-Ukraine Light';
+    font-size: 12px;
+}
+.submenu__link {
+    color: #4E4E4E;
+}
+.submenu__span {
+    display: block;
+    width: 10px;
+    height: 1px;
+    background-color: #f6851f;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/* Site */
+
+.site {
+    width: 100%;
+}
+.site__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.s-l-b, .s-r-b {
+    width: 50%;
+    position: relative;
+}
+.tm__figure {
+    display: block;
+    position: absolute;
+    top: 200px;
+    right: 0;
+}
+.site__title {
+    font-family: 'e-Ukraine Bold';
+    font-size: 88px;
+    line-height: 100px;
+    margin-top: 80px;
+}
+.site__subtitle {
+    font-family: 'e-Ukraine Regular';
+    font-size: 32px;
+    display: block;
+    width: 95%;
+    margin-top: 80px;
+}
+.site__text {
+    background-color: black;
+    width: 90%;
+    padding: 40px;
+    border: 1px solid rgb(83, 83, 83);
+    font-family: 'e-Ukraine Thin';
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/* Types of  site */
+
+.t-site {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 100px;
+    position: relative;
+}
+#drag1, #drag2 {
+    width: max-content;
+    height: max-content;
+    display: flex;
+}
+.d-element {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #fff;
+    position: relative;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    margin-left: 70px;
+}
+.d-e {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #F6851F;
+}
+.d-1 {
+    top: 0;
+    left: 0;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+.d-2 {
+    top: 0;
+    right: 0;
+    margin-right: -2px;
+    margin-top: -2px;
+}
+.d-3 {
+    bottom: 0;
+    left: 0;
+    margin-bottom: -2px;
+    margin-left: -2px;
+}
+.d-4 {
+    bottom: 0;
+    right: 0;
+    margin-bottom: -2px;
+    margin-right: -2px;
+}
+.d-e-c {
+    width: 298px;
+    height: 298px;
+    border-radius: 50%;
+    border: 1px solid #4E4E4E;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.t-arrow {
+    display: block;
+    margin: 0 auto;
+    transform: rotate(90deg);
+    opacity: .5;
+    transition: ease 0.5s;
+}
+.d-e-c:hover .t-arrow {
+    opacity: 1;
+}
+.t-site-t {
+    height: 300px;
+    width: 600px;
+    border: 1px solid white;
+    margin-left: 30px;
+    background-color: black;
+}
+.t-site-link {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+.t-s-t__top {
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: flex-end;
+}
+.t-s-t-t-r {
+    width: 30px;
+    border-left: 1px solid white;
+    display: flex;
+    align-items: center;
+
+}
+.t-s-t-t-r:hover .arrows {
+    width: 22px;
+    height: 22px;
+}
+.arrows {
+    margin: 0 auto;
+    transition: ease 0.3s;
+}
+.d-2-t {
+    margin-left: 70px;
+}
+.t-site__title {
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    padding-left: 30px;
+    font-size: 32px;
+    font-family: 'e-Ukraine Regular';
+}
+.t-site__text {
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 14px;
+    font-family: 'e-Ukraine Thin';
+    line-height: 20px;
+}
+.t-site-subtitle {
+    display: block;
+    font-size: 48px;
+    font-family: 'e-Ukraine Bold';
+    color: #181818;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+}
+
+/* Stages dev */
+
+.st-dev-t {
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+    height: max-content;
+    align-items: center;
+}
+.st-t {
+    display: block;
+    width: 60%;
+    font-size: 82px;
+    line-height: 80px;
+    margin: 0;
+    padding: 0;
+}
+.st-sb {
+    width: 40%;
+    height: 150px;
+    background-color: black;
+    border: 1px solid #4E4E4E;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.st-sb-text {
+    display: block;
+    font-size: 18px;
+    line-height: 28px;
+    font-family: 'e-Ukraine Thin';
+}
+
+/* Accordeon */
+
+.accordeon {
+    margin-top: 100px;
+}
+.ac-block {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    border-top: 1px solid white;
+    border-left: 1px solid #4E4E4E;
+    border-right: 1px solid #4E4E4E;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+}
+.ac-b-title {
+    display: block;
+    padding-left: 40px;
+    font-size: 32px;
+    font-family: 'e-Ukraine Regular';
+    font-weight: 200;
+}
+.ac-block__none {
+    background-color: black;
+    width: 100%;
+    border-left: 1px solid #4E4E4E;
+    border-right: 1px solid #4E4E4E;
+    display: none;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.ac-block__list {
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: relative;
+    font-size: 16px;
+    font-family: 'e-Ukraine Thin';
+    margin-left: 200px;
+    margin-top: 20px;
+}
+.ac-block__list:first-child {
+    margin-top: 0;
+}
+.ac-list__span {
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #f6851f;
+    top: 50%;
+    margin-top: -4px;
+    left: -20px;
+}
+.ac-line {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+}
+.arrow-ac {
+    transform: rotate(90deg);
+    margin-right: 40px;
+    transition: ease 0.5s;
+}
+.active {
+    transform: rotate(-90deg);
+}
+
+/* Our projects */
+
+.our-t-t {
+    justify-content: space-between;
+}
+.our-t {
+    width: 45%;
+}
+.portfolio__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.portfolio__left, .portfolio__right {
+    width: 50%;
+}
+.portfolio__left {
+    margin-top: 300px;
+}
+.title-portfolio-one {
+    font-family: 'e-Ukraine Bold';
+    font-size: 104px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    color: transparent;
+}
+.title-portfolio-two {
+    font-family: 'e-Ukraine Bold';
+    font-size: 104px;
+}
+.subtitle-portfolio {
+    font-family: 'e-Ukraine Regular';
+    font-size: 24px;
+    line-height: 36px;
+}
+.portfolio__right-element {
+    width: max-content;
+    margin: 0 auto;
+    margin-top: 200px;
+
+}
+.title-element {
+    font-size: 55px;
+    font-family: 'e-Ukraine Bold';
+}
+.port__window-one {
+    width: 100%;
+    height: 55px;
+    margin-top: 100px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: black;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+}
+.port__cell {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+.port-one{
+    background-color: #ff4443;
+}
+.port-two {
+    background-color: #ffbe00;
+}
+.port-three {
+    background-color: #00d544;
+}
+.port__cell:first-child{
+    margin-left: 25px;
+}
+.port__window-two {
+    width: 100%;
+    height:  max-content;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid white;
+    background-color: black;
+}
+.port-blok {
+    display: block;
+    height: 250px;
+    width: 90%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.port-blok:first-child {
+    margin-top: 50px;
+}
+.port-title {
+    width: 50%;
+    font-size: 56px;
+    font-family: 'e-Ukraine Regular';
+    text-transform: uppercase;
+}
+.port-text {
+    width: 30%;
+    font-size: 14px;
+    font-family: 'e-Ukraine Thin';
+    line-height: 25px;
+
+}
+.port-title, .port-text {
+    display: block;
+}
+.port__window-three {
+    display: block;
+    width: 100%;
+    height: 150px;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    background-color: black;
+    position: relative;
+}
+.port__window-three {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btn-arrow__rt, .port-three-title, .btn-arrow__lt {
+    display: block;
+}
+.btn-arrow__rt, .btn-arrow__lt {
+    transition: ease .5s;
+}
+.port__window-three:hover .btn-arrow__rt {
+    transform: translateX(-30px);
+}
+.port__window-three:hover .btn-arrow__lt {
+    transform: translateX(30px);
+}
+.port-three-title {
+    font-size: 64px;
+    font-family: 'e-Ukraine Bold';
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    color: transparent;
+    transition: ease 0.3s;
+    width: max-content;
+}
+.port__window-three:hover .port-three-title {
+     color: white;
+}
+.port-dec {
+    width: 5px;
+    height: 5px;
+    background-color: #F6851F;
+    position: absolute;
+
+}
+.decor-one {
+    top: 0;
+    left: 0;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+.decor-two {
+    top: 0;
+    right: 0;
+    margin-top: -2px;
+    margin-right: -2px;
+}
+.decor-three {
+    bottom: 0;
+    left: 0;
+    margin-bottom: -2px;
+    margin-left: -2px;
+}
+.decor-four {
+    bottom: 0;
+    right: 0;
+    margin-bottom: -2px;
+    margin-right: -2px;
+}
+
+/* Insert */
+
+.insert {
+    margin-top: 100px;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    border: 1px solid white;
+    position: relative;
+}
+.insert__title {
+    display: block;
+    width: 500px;
+    font-size: 24px;
+    line-height: 38px;
+    font-family: 'e-Ukraine Regular';
+    padding-left: 50px;
+}
+.insert__circle {
+    padding-right: 50px;
+}
+
+/* Brief */
+
+.brief {
+    width: 100%;
+    height: 800px;
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: url(..//img/video-bc.png) center no-repeat;
+    background-size: cover;
+}
+.brief__window {
+    height: max-content;
+    width: max-content;
+    border: 1px solid white;
+}
+
+.brief-window-top {
+    width: 800px;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+}
+.elevent-brief-one, .elevent-brief-two {
+    width: 60px;
+    height: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+.elevent-brief-one {
+    display: flex;
+    align-items: center;
+}
+.elevent-brief-one:hover .arrows {
+    width: 28px;
+    height: 28px;
+}
+.elevent-brief-two {
+    position: relative;
+}
+.elevent-brief-two:hover .close {
+    opacity: 1;
+}
+.close {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 50%;
+    top: 18%;
+    opacity: 0.5;
+    transition: ease 0.5;
+}
+.close:before, .close:after {
+    position: absolute;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: rgb(124, 124, 124);
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
+}
+.brief-window-bottom {
+    width: 800px;
+    height: max-content;
+    background-color: black;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);;
+}
+.bottom-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.bottom-lt {
+    width: 60%;
+}
+.bottom-rt {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+h6 {
+    font-size: 32px;
+    font-family: 'e-Ukraine Regular';
+    padding-left: 30px;
+    margin: 0;
+    margin-top: 30px;
+}
+.brief-text {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.brief-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #f6851f;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    transition: ease .5s;
+}
+.brief-circle:hover {
+    box-shadow: 0 0 15px 15px #f6831f83;
+}
+.brief-link {
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    font-family: 'e-Ukraine Regular';
+}
+#myVideo {
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.brief__window {
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+}
+.title-win-ser {
+    font-size: 14px;
+    font-family: 'e-Ukraine Thin';
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 25px;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: max-content;
+    margin-top: 200px;
+    background-color: black;
+    padding-bottom: 30px;
+}
+.footer__wrapper-one {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-top: 30px;
+}
+.f-w-lt, .f-w-rt {
+    width: 50%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.f-w-lt {
+    display: flex;
+    align-items: center;
+}
+.footer__text {
+    font-size: 16px;
+    font-family: 'e-Ukraine Thin';
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.f-logo {
+    margin: 0;
+    padding: 0;
+}
+.f-cell-one {
+    width: 50%;
+}
+.f-cell-two {
+    width: 25%;
+}
+.f-cell-three {
+    width: 25%;
+}
+.socialnet {
+    font-size: 14px;
+    font-family: 'e-Ukraine Thin';
+    margin-left: 30px;
+}
+.socialnet:first-child {
+    margin-left: 0;
+}
+.f-mail, .f-phone-cell-two, .f-phone-cell-one, .f-text-cell-one {
+    font-size: 16px;
+    font-family: 'e-Ukraine light';
+}
+.f-text-cell-one {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.f-phone-cell-two, .f-mail {
+    margin-top: 20px;
+}
+.f-socialnetwork {
+    margin-top: 30px;
+}
+.footer__wrapper-two {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.link-f-f {
+    display: block;
+    font-size: 20px;
+    font-family: 'e-Ukraine Medium';
+    margin-top: 30px;
+}
+.link-f-f:first-child {
+    margin-top: 0;
+}
+.link-f-f-f {
+    display: block;
+    font-size: 14px;
+    font-family: 'e-Ukraine Thin';
+    margin-top: 20px;
+}
